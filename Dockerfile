@@ -1,7 +1,6 @@
 FROM ubuntu:24.04
 
 ARG TARGETARCH
-ARG PMHQ_VERSION
 
 RUN echo "Acquire::https::Verify-Peer \"false\";" > /etc/apt/apt.conf.d/99ignore-ssl && \
     echo "Acquire::https::Verify-Host \"false\";" >> /etc/apt/apt.conf.d/99ignore-ssl
