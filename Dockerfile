@@ -34,6 +34,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # 下载并安装 QQ Linux 版
 RUN \
-    wget https://github.com/Rodert/qq-versions/releases/download/qq-packages-20260720-ffedf7c6/QQ_3.2.31_260710_amd64_$TARGETARCH_01.deb -O qq.deb \
+    wget https://github.com/Rodert/qq-versions/releases/download/qq-packages-20260720-ffedf7c6/QQ_3.2.31_260710_${TARGETARCH}_01.deb -O qq.deb \
     && apt-get install -f -y ./qq.deb \
     && rm qq.deb
